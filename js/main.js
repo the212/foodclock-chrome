@@ -74,6 +74,29 @@ $(function() {
 
 	];
 
+	var latenight = [
+
+		{
+			image: 'images/4-dinner/bionicgrrrl-sliders-mark.jpg',
+			food: 'Sliders',
+			restaurant: "Mark Burger",
+			restaurant_url: 'http://stmarksburger.com/',
+			city: 'New York City',
+			photographer: 'Bionic Bites',
+			photographer_url: 'http://www.bionicbites.com/'
+		},
+		{
+			image: 'images/4-dinner/daniel-krieger-katz.jpg',
+			food: 'Hot Dogs',
+			restaurant: "Katz's Delicatessen",
+			restaurant_url: 'http://katzsdelicatessen.com/',
+			city: 'New York City',
+			photographer: 'Daniel Krieger',
+			photographer_url: 'http://instagram.com/danielkrieger'
+		}
+
+	];
+
   // Handler for .ready() called.
   // Create two variable with the names of the months and days in an array
 	var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
@@ -113,13 +136,14 @@ $(function() {
 			case 13:
 			case 14:
 				//lunch
-				main_pic = lunch[Math.floor(Math.random()*coffee.length)];
+				main_pic = lunch[Math.floor(Math.random()*lunch.length)];
 			break;
 
 			case 15:
 			case 16:
 			case 17:
 				// afternoon snack
+				main_pic = coffee[Math.floor(Math.random()*coffee.length)];
 			break;
 
 			case 18:
@@ -127,12 +151,14 @@ $(function() {
 			case 20:
 			case 21:
 				// dinner
+				main_pic = dinner[Math.floor(Math.random()*dinner.length)];
 			break;
 
 			case 22:
 			case 23:
 			case 24:
 				// late night
+				main_pic = latenight[Math.floor(Math.random()*latenight.length)];
 			break;
 
 		}
@@ -208,7 +234,7 @@ function changePic(main_pic) {
 	$(".restaurant").attr('href', main_pic.restaurant_url);
 
 	$(".photographer").html(main_pic.photographer);
-	$(".photographer_url").attr('href', main_pic.photographer_url);
+	$(".photographer").attr('href', main_pic.photographer_url);
 
 	$(".city").html(main_pic.city);
 }

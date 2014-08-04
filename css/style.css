@@ -66,8 +66,9 @@ body {
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
-    height:640px;
+    height:630px;
     margin:10px;
+    margin-right:18px;
 }
 
 h1 {
@@ -166,10 +167,24 @@ ul li {
      padding: 30px;
      color: #000;
      position: absolute;
-     bottom:30px;
+     bottom:20px;
      margin-left:50%;
      left:-400px;
      text-align: center;
+}
+
+@media (min-width: 1800px) {
+    .info {
+        bottom:60px;
+    }
+
+    .info h2 {
+        font-size:20px;
+    }
+
+    .info h4 {
+        font-size:14px;
+    }
 }
 
 .info h2 {
