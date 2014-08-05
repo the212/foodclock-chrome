@@ -77,7 +77,7 @@ $(function() {
 	var latenight = [
 
 		{
-			image: 'images/4-dinner/bionicgrrrl-sliders-mark.jpg',
+			image: 'images/5-latenight/bionicgrrrl-sliders-mark.jpg',
 			food: 'Sliders',
 			restaurant: "Mark Burger",
 			restaurant_url: 'http://stmarksburger.com/',
@@ -86,7 +86,7 @@ $(function() {
 			photographer_url: 'http://www.bionicbites.com/'
 		},
 		{
-			image: 'images/4-dinner/daniel-krieger-katz.jpg',
+			image: 'images/5-latenight/daniel-krieger-katz.jpg',
 			food: 'Hot Dogs',
 			restaurant: "Katz's Delicatessen",
 			restaurant_url: 'http://katzsdelicatessen.com/',
@@ -166,6 +166,8 @@ $(function() {
 		hour -= 12;
 	} else if (hour === 0) {
 		hour = 12;
+		// late night
+		main_pic = latenight[Math.floor(Math.random()*latenight.length)];
 	} else {
 		switch(hour) {
 

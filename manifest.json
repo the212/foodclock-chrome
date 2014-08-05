@@ -1,7 +1,7 @@
 {
   "name": "FoodClock",
-  "description": "Override the new tab page with Food Clock",
-  "version": "0.2",
+  "description": "the New Tab for Foodies! amazing food imagery instead of creepy / default 'most visited sites' on every New Tab :)",
+  "version": "0.3",
   "chrome_url_overrides": {
     "newtab": "redirect.html"
   },
