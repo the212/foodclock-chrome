@@ -1,5 +1,16 @@
 $(function() {
 
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", "http://foodclock.co/blog/wp-json/posts", true);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState == 4) {
+			// JSON.parse does not evaluate the attacker's scripts.
+			var resp = JSON.parse(xhr.responseText);
+			console.log("RESPONSE!!! ", resp);
+		}
+	};
+	xhr.send();
+
 	var breakfast = [
 
 		{

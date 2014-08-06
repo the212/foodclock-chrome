@@ -15,5 +15,9 @@
     "newtab": "redirect.html"
   },
 
+  "permissions": [
+    "http://foodclock.co/blog, http://foodclock.co"
+  ],
+
   "manifest_version": 2
 }
