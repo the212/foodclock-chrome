@@ -22,7 +22,7 @@ function addImgs(data) {
 			city: 'New York City',
 			photographer: 'Jocelyn and Cathy',
 			photographer_url: 'http://foodishfetish.blogspot.com/'
-		}
+		};
 
 		switch(value.terms.category[0].slug) {
 			case "late-night":
