@@ -206,11 +206,18 @@ $(function() {
 		var hours = new Date().getHours();
 		var ampm = "am";
 
+		console.log(hours);
+
 		if (hours > 12) {
 			hours -= 12;
 			ampm = "pm";
+		} else if (hours === 12) {
+			ampm = "pm";
 		} else if (hours === 0) {
 			hours = 12;
+			ampm = "am";
+		} else {
+			ampm = "am";
 		}
 		// Add a leading zero to the hours value
 		$("#hours").html(( hours < 10 ? "0" : "" ) + hours);

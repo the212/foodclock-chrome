@@ -76,6 +76,15 @@ h1 {
      margin:10px 0px;
 }
 
+a {
+    color:rgb(255, 56, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 /******************************************
 /* LAYOUT                   
@@ -84,11 +93,10 @@ header {
      height:40px;
      width:100%;
      position: fixed;
-     background:#000;
      color:#fff;
-     background:rgba(0,0,0,0.2);
      padding-left:20px;
-     padding-right:20px;
+     padding-right:40px;
+     padding-top:10px;
 }
 
 .logo {
@@ -123,13 +131,13 @@ header {
 }
 
 .clock {
-    width: 540px;
+    width: 700px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 30px 0px;
     color: #FFF;
     position: relative;
-    top:180px;
-    background:rgba(0,0,0,0.2);
+    top:120px;
+    /* background:rgba(0,0,0,0.2); */
 }
 
 #Date {
@@ -139,7 +147,7 @@ header {
 }
 
 ul {
-    width: 500px;
+    width: 700px;
     margin: 0 auto;
     padding: 0px;
     list-style: none;
@@ -148,17 +156,22 @@ ul {
 
 ul li {
     display: inline;
-    font-size: 10em;
+    font-size: 17em;
     text-align: center;
+    font-weight:200;
+    letter-spacing: 26px;
 }
 
 #ampm {
      text-transform: uppercase;
      color:#FFF;
-     font-size: 6em;
+     font-size: 4em;
      letter-spacing: 1px;
      display: inline-block;
-     margin-left:15px;
+     text-align: center;
+     width:700px;
+     margin-top:-40px;
+     font-weight:200;
 }
 
 .info {
