@@ -1,9 +1,23 @@
 {
   "name": "FoodClock",
-  "description": "Override the new tab page with Food Clock",
-  "version": "0.2",
+  "short_name": "New Tab for Foodies!",
+  "version": "0.4",
+  "author": "http://the212.co",
+  "description": "the New Tab for Foodies! amazing food imagery instead of creepy / default 'most visited sites' on every New Tab :)",
+
+  "icons": {
+  	"16": "icon16.png",
+  	"48": "icon48.png",
+    "128": "icon128.png"
+  },
+
   "chrome_url_overrides": {
     "newtab": "redirect.html"
   },
+
+  "permissions": [
+    "http://foodclock.co/blog, http://foodclock.co"
+  ],
+
   "manifest_version": 2
 }
