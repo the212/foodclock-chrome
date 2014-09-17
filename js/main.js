@@ -6,10 +6,19 @@ var latenight = [];
 var hour = 0;
 var main_pic = 'images/3-lunch/Harris-Ueng-eisenbergs-corned-beef-matzo-ball-soup.jpg';
 
+/********************************
+******** TODO: ********************
+	planning on upgrading to single API call in background script
+	and saving food image data in local Storage... coming soon..
+************************************/
+
 function addImgs(data) {
 
 	$.each(data, function( index, value ) {
 
+		/* this is a little funky... I am getting the food image variables 
+		based on the html created on each blog post on foodclock.co/blog...
+		bit of a hack... */
 		var foodImg = value.content.split('src="')[1].split('" alt="')[0];
 		var foodName = value.excerpt.split('<p>')[1].split('@')[0];
 		var foodPlace = value.content.split('@')[1].split('</p>')[0];
@@ -24,6 +33,7 @@ function addImgs(data) {
 			photographer_url: 'http://foodishfetish.blogspot.com/'
 		};
 
+		//add each Food object to it's specific food category
 		switch(value.terms.category[0].slug) {
 			case "late-night":
 				latenight.push(foodObj);
@@ -226,6 +236,8 @@ $(function() {
 		}, 1000);
 });
 
+// update redirect.html using jQuery 
+// to display new Food Image based on time of day :)
 function changePic(main_pic) {
 
 	$(".bg-container").css('background', "url(" + main_pic.image + ") no-repeat center center fixed");
